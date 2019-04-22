@@ -21,6 +21,8 @@ public class TbItemController {
 	@Autowired
 	TbItemService tbItemService;
 
+
+	//测试一个查询商品byid
 	@RequestMapping("chaxun/{id}")
 	@ResponseBody
 	public TbItem selectTbItemById(@PathVariable Long id) {
