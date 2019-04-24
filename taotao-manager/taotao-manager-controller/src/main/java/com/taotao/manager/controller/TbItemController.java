@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.taotao.common.pojo.EUDataGridResult;
 import com.taotao.manager.pojo.TbItem;
 import com.taotao.manager.service.TbItemService;
 
@@ -16,6 +17,7 @@ import com.taotao.manager.service.TbItemService;
  * @date 创建时间：2019年4月22日 上午1:06:27
  * @version 1.0
  */
+@RequestMapping("/item/")
 @Controller
 public class TbItemController {
 	@Autowired
@@ -28,5 +30,12 @@ public class TbItemController {
 	public TbItem selectTbItemById(@PathVariable Long id) {
 		TbItem selectTbItemById = tbItemService.selectTbItemById(id);
 		return selectTbItemById;
+	}
+	//查询所有的商品并且进行分页展示
+	@RequestMapping("list")
+	@ResponseBody
+	public EUDataGridResult queryAllItem(int page,int rows) {
+		EUDataGridResult result = tbItemService.queryAllItem(page, rows);
+		return result;
 	}
 }
