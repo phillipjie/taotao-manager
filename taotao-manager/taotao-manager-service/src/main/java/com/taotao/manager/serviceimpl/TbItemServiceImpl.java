@@ -8,8 +8,10 @@ import org.springframework.stereotype.Service;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.taotao.common.pojo.EUDataGridResult;
+
 import com.taotao.manager.mapper.TbItemMapper;
 import com.taotao.manager.pojo.TbItem;
+
 import com.taotao.manager.pojo.TbItemExample;
 import com.taotao.manager.service.TbItemService;
 
@@ -40,4 +42,6 @@ public class TbItemServiceImpl implements TbItemService {
 		result.setTotal(new PageInfo<TbItem>(selectByExample).getTotal());
 		return result;
 	}
+
+	
 }

@@ -1,6 +1,7 @@
 package com.taotao.manager.service;
 
 import com.taotao.common.pojo.EUDataGridResult;
+import com.taotao.common.pojo.TreeNode;
 import com.taotao.manager.pojo.TbItem;
 
 /**
@@ -14,5 +15,5 @@ public interface TbItemService {
 
 	TbItem selectTbItemById(Long id);
 	EUDataGridResult queryAllItem(int page,int rows);
-
+	
 }
