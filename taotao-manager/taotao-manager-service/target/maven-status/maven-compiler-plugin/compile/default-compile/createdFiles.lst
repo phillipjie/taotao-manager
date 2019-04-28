@@ -1,2 +1,6 @@
 com\taotao\manager\service\TbItemService.class
+com\taotao\manager\service\TbItemCatService.class
 com\taotao\manager\serviceimpl\TbItemServiceImpl.class
+com\taotao\manager\serviceimpl\PictureServiceImpl.class
+com\taotao\manager\service\PictureService.class
+com\taotao\manager\serviceimpl\TbItemCatServiceImpl.class
